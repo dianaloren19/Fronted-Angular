@@ -1,0 +1,31 @@
+<div id="header">
+<div id="titulo" >CRUD  "{{title}} </div>
+<div id="logo">
+  <img src="assets/images/angular.png"  class="app-logo" alt="logotipo">
+</div>
+<div>
+  <nav id="menu">
+    <ul>
+        <li>
+            <a routerLink="add" routerLinkActive="['active']">User-add</a>
+        </li>
+        <li>
+           <a routerLink="students" routerLinkActive="['active']">Students-list</a>
+        </li>
+        <li>
+          <a  href="students/:id" routerLinkActive="['active']" onclick="return false">Edit</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="clearfix"></div>
+<div class="container mt-3">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+</div>
+	
+	
+	
+
+
+

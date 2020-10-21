@@ -1,0 +1,65 @@
+
+<div style="width: 100px; margin: auto;">
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div  class="form-group" style="padding-bottom: 20%;">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            #name="ngModel" [(ngModel)]="student.name" required minlength="3" maxlength="15"   pattern="[a-zA-z ]+"/>
+            <div *ngIf="name.invalid  && (name.dirty || name.touched)"
+                      class="alert alert-danger">
+                    <div *ngIf="name.errors.required">
+                      Name is required.
+                    </div>
+                    <div *ngIf="name.errors.minlength">
+                      Name must be at least 3 characters long.
+                    </div>
+                    <div *ngIf="name.errors.maxlength">
+                      Name must be  max 15 characters long.
+                    </div>
+                    <div *ngIf="name.errors.pattern">
+                      Name cannot use special characters or number
+                    </div>
+            </div>
+          </div>
+
+        <div class="form-group" style="padding-bottom: 20%;">
+          <label for="apellido">Last Name</label>
+          <input
+            class="form-control"
+            id="apellido"
+            name="apellido"
+            #apellido="ngModel" [(ngModel)]="student.apellido" required minlength="3" maxlength="15" pattern="[a-zA-z ]+"/>
+            <div *ngIf="apellido.invalid  && (apellido.dirty || apellido.touched)"
+                      class="alert alert-danger">
+                    <div *ngIf="apellido.errors.required">
+                      Name is required.
+                    </div>
+                    <div *ngIf="apellido.errors.minlength">
+                      Name must be at least 3 characters long.
+                    </div>
+                    <div *ngIf="name.errors.maxlength">
+                      Name must be  max 20 characters long.
+                    </div>
+                    <div *ngIf="apellido.errors.pattern">
+                      Name cannot use special characters or number
+                    </div>
+            </div>
+        </div>
+      <button [disabled]="name.invalid || apellido.invalid"  (click)="saveStudent()" class="btn btn-success">Submit</button>
+      </div>
+      <div *ngIf="submitted">
+        <h4>Creacion exitosa!</h4>
+        <button class="btn btn-success" (click)="newStudent()">Add</button>
+      </div>
+    </div>
+  </div>
+  
+      
+      
+      
+  

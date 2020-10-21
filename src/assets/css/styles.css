@@ -1,0 +1,92 @@
+body{
+    background:rgb(80, 79, 168);
+}
+#header{
+    height:130px;
+    width:100%;
+    background: rgb(218, 49, 161);
+    border-bottom: 1px solid black;
+    border-top: 5px solid #080808;
+}
+#titulo{
+    text-align: center;
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#titulo1{
+    text-align: center;
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.clearfix{
+    clear: both;
+    float:none;
+}
+#logo{
+    width:30%;
+    font-size:30px;
+    float:left;
+    margin-top:-1px; 
+
+}
+#logo img{
+    display:block;
+    float:left;
+    height: 50px;
+    margin-top:-20px; 
+    animation:latir infinite 5s linear;
+}
+@keyframes latir{
+    0%{
+        transform:scale(1,1);
+    }
+    50%{
+        transform:scale(1.1,1.1);
+    }
+    55%{
+        transform:scale(0.9,0.9);
+    }
+    100%{
+        transform:scale(1,1);
+    }
+}
+
+#menu{
+    width: 70%;
+    float: right;
+    font-size: 25px;
+}
+#menu ul{
+    line-height: 85px;
+    width: 50%;
+    float:right;
+    margin-top:1px; 
+}
+#menu ul li{
+    display: inline-block;
+    list-style: none;
+    height: 40px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+#menu a{
+    text-decoration: none;
+    color:rgb(248, 241, 241);
+    transition: 300ms all;
+}
+#menu a:hover,
+/*cuando se da click al nombre del menu quede de otro color*/
+.active{
+    color:#1f0535b7 !important;
+    
+}
+#centrado{
+    text-align: center;
+    margin-top: -200px;
+}
